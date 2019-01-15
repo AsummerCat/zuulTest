@@ -1,0 +1,24 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: zuul-server
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+
+#ribbon的读取 连接的超时时间设置
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+
+zuul:
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
